@@ -5,4 +5,5 @@ function solution(number) {
       sum += i;
     }
   }
+  return sum;
 }
