@@ -1,17 +1,16 @@
 function longestSubstring(str) {
-  let longest = "";
+  let currentStr = "";
   let length = 0;
-  let prevLength = 0;
+  let pos;
   for (let i = 0; i < str.length; i++) {
-    if (!longest.includes(str[i])) {
-      longest += str[i];
-    } else {
-      length = Math.max(longest.length, prevLength);
-      prevLength = longest.length;
-      longest = str[i];
+    pos = currentStr.indexOf(str[i]);
+    if (pos !== -1) {
+      currentStr = currentStr.substring(pos + 1);
     }
+    currentStr += str[i];
+    length = Math.max(length, currentStr.length);
   }
   return length;
 }
 
-console.log(longestSubstring("sultandelen"));
+console.log(longestSubstring("dvdfhsdgr"));
