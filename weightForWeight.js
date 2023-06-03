@@ -4,11 +4,10 @@ function orderWeight(str) {
   let weights = str.split(" ");
   for (let val of weights) {
     result.push({
-      val,
+      val: val,
       sum: sumOfDigits(val),
     });
   }
-  console.log(result);
   return result
     .sort(compare)
     .map((x) => x.val)
