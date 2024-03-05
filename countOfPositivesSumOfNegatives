@@ -1,0 +1,10 @@
+function countPositivesSumNegatives(input) {
+  if (input === null || input.length === 0) {
+    return [];
+  }
+  let countOfPositives = input.filter((element) => element > 0).length;
+  let sumOfNegatives = input
+    .filter((element) => element < 0)
+    .reduce((acc, cur) => acc + cur, 0);
+  return [countOfPositives, sumOfNegatives];
+}
