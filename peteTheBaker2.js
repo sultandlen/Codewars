@@ -7,6 +7,7 @@ function getMissingIngredients(recipe, added) {
       let currentCount = Math.ceil(added[key] / recipe[key]);
       count = Math.max(count, currentCount);
     }
+    2;
   }
 
   for (let key in recipe) {
